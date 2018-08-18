@@ -5,4 +5,6 @@ import android.support.annotation.StringRes
 interface IView {
 
     fun showMessage(@StringRes message: Int)
+
+    fun showMessage(message: String)
 }

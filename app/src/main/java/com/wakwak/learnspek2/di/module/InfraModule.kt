@@ -1,4 +1,4 @@
-package com.wakwak.learnspek2.di
+package com.wakwak.learnspek2.di.module
 
 import com.squareup.moshi.Moshi
 import com.wakwak.learnspek2.infra.GitHubService
@@ -11,11 +11,13 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
-private const val GIT_HUB_ACCEPT_HEADER = "application/vnd.github.v3+json"
-private const val GIT_HUB_BASE_URL = "https://api.github.com"
-
 @Module
 class InfraModule {
+
+    companion object {
+        private const val GIT_HUB_ACCEPT_HEADER = "application/vnd.github.v3+json"
+        private const val GIT_HUB_BASE_URL = "https://api.github.com"
+    }
 
     @Provides
     @Singleton
