@@ -4,8 +4,8 @@ import android.content.SharedPreferences
 import io.reactivex.Single
 import javax.inject.Inject
 
-class PreferencesRepository @Inject constructor(val preferences: SharedPreferences,
-                                                val editor: SharedPreferences.Editor) {
+class PreferencesRepository @Inject constructor(private val preferences: SharedPreferences,
+                                                private val editor: SharedPreferences.Editor) {
 
     fun getLastFetchedUser(): Single<String> = Single.just(
             preferences.getString("lastFetchedUser", "wakwak3125")

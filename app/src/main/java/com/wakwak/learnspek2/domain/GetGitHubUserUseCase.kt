@@ -6,8 +6,8 @@ import io.reactivex.Single
 import okhttp3.ResponseBody
 import javax.inject.Inject
 
-class GetGitHubUserUseCase @Inject constructor(val gitHubUserRepository: GitHubUserRepository,
-                                               val sharedPreferencesRepository: PreferencesRepository) {
+class GetGitHubUserUseCase @Inject constructor(private val gitHubUserRepository: GitHubUserRepository,
+                                               private val sharedPreferencesRepository: PreferencesRepository) {
 
     fun execute(): Single<ResponseBody> =
             sharedPreferencesRepository.getLastFetchedUser()
