@@ -7,6 +7,7 @@ import kotlin.test.assertEquals
 object CalcFeature : Spek({
     Feature("Addition") {
         val calc = Calc()
+        val c by memoized { Calc() }
         var result = 0
 
         Scenario("Simple calculation") {
