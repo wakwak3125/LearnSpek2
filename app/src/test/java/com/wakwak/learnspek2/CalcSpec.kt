@@ -9,7 +9,8 @@ import kotlin.test.assertEquals
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-object ExampleSpecTest : Spek({
+object CalcSpec : Spek({
+
     describe("A calculation") {
         val calc by memoized { Calc() }
 

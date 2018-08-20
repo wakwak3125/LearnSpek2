@@ -1,6 +1,7 @@
 package com.wakwak.learnspek2
 
 import org.junit.Assert.assertEquals
+import org.junit.Before
 import org.junit.Test
 
 /**
@@ -8,10 +9,17 @@ import org.junit.Test
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class CalcUnitTest {
+
+    private lateinit var calc: Calc
+
+    @Before
+    fun setUp() {
+        calc = Calc()
+    }
 
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        assertEquals(4, calc.addition(2, 2))
     }
 }
